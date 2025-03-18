@@ -38,9 +38,9 @@ jobs:
       - name: Build image
         env:
           IMAGE_NAME: ghcr.io/eadwu/k8s-device-plugin
-          VERSION: 100.0.0
+          VERSION: 100.0.1
           PUSH_ON_BUILD: true
-          BUILD_MULTI_ARCH_IMAGES: false
+          BUILD_MULTI_ARCH_IMAGES: true
         run: |
           echo "${VERSION}"
           make -f deployments/container/Makefile build
